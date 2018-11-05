@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+
+    <!-- The justified navigation menu is meant for single line per list item.
+         Multiple lines will require custom code not provided by Bootstrap. -->
+    <div class="masthead">
+      <h3 class="text-muted">Group 5: Text Recognition ML Model</h3>
+      <nav>
+        <ul class="nav nav-justified">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/text_analysis">Text Analysis</a></li>
+          <li><a href="/info">Fun Facts</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+      <h1>Learn How to Analyze Text With Us!</h1>
+      <p class="lead">Ever wish there was an easy way to transfer your handwritten notes into a readable document that you can share with your peers? Well look no further! We have provided an avenue for you to do just that. Explore our site to find out how!</p>
+      <p><a class="btn btn-lg btn-success" href="text_analysis" role="button">Get started now!</a></p>
+    </div>
+
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-lg-4">
+        <h2 align="center">Our Goal</h2>
+        <p align= "center"> Our goal with this project was to create a user friendly application for our users to be able to 
+          transmit their handwritten notes into sharable online content.</p>
+      </div>
+      <div class="col-lg-4">
+        <h2 align="center"> Our Solution</h2>
+        <p align= "center">Our solution consists of a model whose implementation depends on
+          numpy, cv2 and tenserflow imports. It consists of 5 CNN layers, 2RNN (LSTM) layers and 
+          the CTC loss and decoding layer. The model was deployed using a flask app with a html form 
+          utilizing the Get and Post method to collect text to be analyzed.
+        </p>
+     </div>
+      <div class="col-lg-4">
+        <h2 align = "center">Our Path to Accomplishment!</h2>
+        <p align= "center"> We accomplished this by deploying a machine learning text recognition model via a flask app interface.
+          Users are able to upload any file of text image and our model analyze and predict the printed text of the image.
+        </p>
+      </div>
+    </div>
+
+    <!-- Site footer -->
+    <footer class="footer">
+      <p>&copy; 2018 Data Analytics Bootcamp</p>
+    </footer>
+
+  </div> <!-- /container -->
+{% endblock %}

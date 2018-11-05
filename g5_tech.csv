@@ -1,0 +1,9 @@
+type,name,version
+JavaScript,compromise,11.2.1
+CSS3,Boostrap,3.3.7
+web framework,Flask,1.0.2
+Python,Flask-PyMongo,2.1.0
+Python,Numpy,1.15.2
+Python,SQLAlchemy,1.2.10
+Python,Tensorflow,1.11.0
+Python,Werkzeug,0.14.1

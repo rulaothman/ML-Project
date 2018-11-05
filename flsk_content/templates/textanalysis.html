@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+
+    <!-- The justified navigation menu is meant for single line per list item.
+         Multiple lines will require custom code not provided by Bootstrap. -->
+    <div class="masthead">
+      <h3 class="text-muted">Group 5: Text Recognition ML Model</h3>
+      <nav>
+        <ul class="nav nav-justified">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li class="active"><a href="/text_analysis">Text Analysis</a></li>
+          <li><a href="/info">Fun Facts</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+      <h1>Handwritten Text Recognition with TensorFlow</h1>
+      <p class="lead">Handwritten Text Recognition (HTR) system implemented with TensorFlow (TF) and trained on the IAM off-line HTR dataset.
+        This Neural Network (NN) model recognizes the text contained in the images of segmented words.
+        As these word-images are smaller than images of complete text-lines, the NN can be kept small and training on the CPU is feasible.
+        2/3 of the words from the validation-set are correctly recognized and the character error rate is around 13%.
+      </p>
+      <!doctype html>
+      <div class="row"></div>
+    <title>Upload new File</title>
+    <div class="row"></div>
+    <h2>Upload new File</h2>
+    <center><form method=post enctype=multipart/form-data>
+      <p></a><input type=file name=file>
+         <input type=submit value=Upload>
+    </form></center>
+    <p> {{var}}</p>
+    </div>
+
+    <!-- Show columns if file is defined -->
+	{% if filepath != '' %}
+    <div class="row">
+      <div class="col-lg-6">
+        <h2>Your Uploaded Image</h2>
+        <h4> <br>Your handwritten word is:</h4>
+        <img class = "img-fluid" src = {{filepath}}>
+      </div>
+      <div class="col-lg-6">
+        <h2>Recognized Word from Image</h2>
+        <h4> <br>Your recognized word is: </h4>
+        <h4 align = "center" style="color:pink"> "{{word}}"</h4>
+     </div>
+
+    </div>
+	{% else %}
+	 <div class="row">
+      <div class="col-lg-6">
+        <h2 align = "center">No image to see here....</h2>
+      </div>
+      <div class="col-lg-6">
+        <h2 align = "center">Hehe, no word to see here either. </h2>
+     </div>
+	 </div>
+	{% endif %}
+
+    <!-- Site footer -->
+    <footer class="footer">
+      <p>&copy; 2018 Data Analytics Bootcamp</p>
+    </footer>
+
+  </div> <!-- /container -->
+{% endblock %}

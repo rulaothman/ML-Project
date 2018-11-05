@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+
+    <!-- The justified navigation menu is meant for single line per list item.
+         Multiple lines will require custom code not provided by Bootstrap. -->
+    <div class="masthead">
+      <h3 class="text-muted">Group 5: Text Recognition ML Model</h3>
+      <nav>
+        <ul class="nav nav-justified">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/text_analysis">Text Analysis</a></li>
+          <li class="active"><a href="/info">Fun Facts</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+      <h1>Some Background Information</h1>
+      <p class="lead"><img src="/resources/img4.jpeg"></p>
+
+    </div>
+
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-lg-4">
+        <h1>Model Overview</h1>
+
+<p>- NN which is trained on IAM dataset word images</p>
+<p>- Consists of CNN layers (forward-feed neural networks) and RNN (back-and-forth flowing information)</p>
+<p>- Final Connectionist Temporal Classification (CTC) layer trains RNN</p>
+
+<p><img class="center-block" src="/resources/img1.png" style="width:50%;"></p>
+
+      </div>
+      <div class="col-lg-4">
+        <h2>Operations</h2>
+        <p>* 5 CNN layers
+<p>- Filter kernel of size 5x5 in the first two layers, and 3x3 in the last three layers</p>
+<p>- Image height is downsized by 2 in each layer</p>
+<p>- Output feature map (sequence) has size of 32 x 256</p>
+<p>- LTSM implementation of RNN is used</p>
+<p>- LTSM (cell, input gate, output gate, and forget gate), three gates regulate flow of information into and out of cell</p>
+<p>- IAM dataset = 79 different characters, and further one additional character needed for CTC operation= 80 entries for each of the 32 time-steps</p>
+<p>- RNN output sequence is mapped to a 32 x 80 matrix</p>
+<p>- CTC during the training of NN, the CTC is given the RNN output matrix +ground truth text and it computes loss value</p>
+<p>- Ground truth text - original image, image seen by direct observation, 32 character limit </p>
+<p><img class="center-block" src="/resources/img2.png" style="width:50%;"></p>
+     </div>
+      <div class="col-lg-4">
+        <h2>Data</h2>
+        <p>- Input: Gray value image of size 128x32, resized (without distortion, meaning white space is added instead of expanding original picture)</p>
+  <p>- CNN output: Fig. 4 shows output of CNN layers which is sequence of length 32, each entry contains 256 features</p>
+  <p>- RNN output: 80 entries on output matrix</p>
+  <p><img class="center-block" src="/resources/img3.png" style="width:50%;"></p>
+      </div>
+    </div>
+
+    <!-- Site footer -->
+    <footer class="footer">
+      <p>&copy; 2018 Data Analytics Bootcamp </p>
+    </footer>
+
+  </div> <!-- /container -->
+{% endblock %}

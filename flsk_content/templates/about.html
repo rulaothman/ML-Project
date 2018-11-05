@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+
+    <!-- The justified navigation menu is meant for single line per list item.
+         Multiple lines will require custom code not provided by Bootstrap. -->
+    <div class="masthead">
+      <h3 class="text-muted">Group 5: Text Recognition ML Model</h3>
+      <nav>
+        <ul class="nav nav-justified">
+          <li><a href="/">Home</a></li>
+          <li class="active"><a href="/about">About</a></li>
+          <li><a href="/text_analysis">Text Analysis</a></li>
+          <li><a href="/info">Fun Facts</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+      <h1>What Did We Use?</h1>
+      <p class="lead">Below you will find a mongo database table used to navigate the various technologies utilized in our project.</p>
+      <p class="lead"></p>
+  
+    </div>
+
+    <!-- Two columns of differing widths -->
+    <div class="row">
+      <div class="col-sm-6">
+        <h2>Team Photo</h2>
+        <img src="images/groupic.jpg" style="width:50%;"/>
+        <p>Danny, Roy, Rula </p>
+    
+      </div>
+      <div class="col-sm-6">
+              <h2 align="center">Site Technologies</h2>
+              <p align= "center">Type something in the input field to search the table for resources, names or versions:</p>
+              <input class="form-control" id="myInput" type="text" placeholder="Search..">
+            <table class="table table-hover">
+            <!--Create a table to call from everything variable defined in app.py-->
+
+              <thead>
+                <tr>
+                    <th>Resource</th>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody id="myTable">
+                  {% for thing in everything %}
+                  <tr>
+                    <td>{{ thing.type }}</td>
+                    <td>{{ thing.name }}</td>
+                    <td>{{ thing.version }}</td>
+                  </tr>
+                  {% endfor %}
+                </table>
+     </div>
+
+    </div>
+
+    <!-- Site footer -->
+    <footer class="footer">
+      <p>&copy; 2018 Data Analytics Bootcamp </p>
+    </footer>
+
+  </div> <!-- /container -->
+{% endblock %}
