@@ -2,14 +2,24 @@
 # Repository Description 
 
 ## Downloading / Getting Libraries:
-
-`pip install opencv-python = cv2`
+cv2:
+`pip install opencv-python`  
+editdistance:
 `pip install editdistance`
 
-Integrating with WordBeamSearch:
-Compile on your machine
+## Flask Application:
+Run app.py in flsk_content
 
-BeamSearch vs Best Path Finding
+## Flask Website Description:
+1. Home
+    - Breif Introduction of our project
+2. About
+    - Describes the model / technologies used
+3. Text Analysis
+    - Upload your text image and model infers your word
+4. Application
+    - Testing & Points to Consider & Going Forward
 
-FLASK:
-ERROR: Maximum Recursion depth exceeded 
+## Model / Repository Used:
+1. [SimpleHTR](https://github.com/githubharald/SimpleHTR) 
+2. [CTCWordBeamSearch](https://github.com/githubharald/CTCWordBeamSearch)

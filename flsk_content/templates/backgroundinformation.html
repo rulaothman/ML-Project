@@ -9,58 +9,88 @@
       <nav>
         <ul class="nav nav-justified">
           <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
+          <li class="active"><a href="/about">About</a></li>
           <li><a href="/text_analysis">Text Analysis</a></li>
-          <li class="active"><a href="/info">Fun Facts</a></li>
+          <li><a href="/info">Application</a></li>
         </ul>
       </nav>
     </div>
 
     <!-- Jumbotron -->
     <div class="jumbotron">
-      <h1>Some Background Information</h1>
-      <p class="lead"><img src="/resources/img4.jpeg"></p>
+      <h1>Application</h1>
+      <p class="lead">  </p>
 
-    </div>
-
-    <!-- Example row of columns -->
+      <h2><br>1. Testing Our Model</h2><br>
+      <div class="container">
+          <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th class = "text-center">Decorder Type</th>
+                  <th class = "text-center">Total # of Words</th>
+                  <th class = "text-center">Correctly Recognized</th>
+                  <th class = "text-center">Accuracy</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Best Path</td>
+                  <td>53</td>
+                  <td>34</td>
+                  <td>64.2 %</td>
+                </tr>
+                <tr>
+                  <td>Beam Search</td>
+                  <td>53</td>
+                  <td>34</td>
+                  <td>64.2 %</td>
+                </tr>
+                <tr>
+                  <td>Word Beam Search</td>
+                  <td>53</td>
+                  <td>38</td>
+                  <td>71.7 %</td>
+                </tr>
+              </tbody>
+          </table>
+        <div class="col-md-12" style="padding-left: 0px;  padding-right: 0px;">
+          <img src="{{url_for('static', filename='Jackie_Words/jackie_full_note.png')}}" style="width:70%;">
+        </div>
+      </div>
+      <br>
+      <!-- Dataframe to HTML Table -->
+      <table class="table table-bordered">  <thead>    <tr style="text-align: right;">      <th></th>      <th class = "text-center">words</th>      <th class = "text-center">bestpath</th>      <th class = "text-center">beamsearch</th>      <th class = "text-center">wordbeamsearch</th>    </tr>  </thead>  <tbody>    <tr>      <th>0</th>      <td>probability</td>      <td>Probabivty</td>      <td>Probabivty</td>      <td>pro6ability</td>    </tr>    <tr>      <th>1</th>      <td>team</td>      <td>Feam</td>      <td>Feam</td>      <td>Jean</td>    </tr>    <tr>      <th>2</th>      <td>heather</td>      <td>Ieather</td>      <td>Ieather</td>      <td>Heather</td>    </tr>    <tr>      <th>3</th>      <td>shane</td>      <td>shane</td>      <td>shane</td>      <td>shame</td>    </tr>    <tr>      <th>4</th>      <td>on</td>      <td>on</td>      <td>on</td>      <td>on</td>    </tr>    <tr>      <th>5</th>      <td>class</td>      <td>class</td>      <td>class</td>      <td>class</td>    </tr>    <tr>      <th>6</th>      <td>produce</td>      <td>produre</td>      <td>produre</td>      <td>produce</td>    </tr>    <tr>      <th>7</th>      <td>students</td>      <td>stadents</td>      <td>stadents</td>      <td>students</td>    </tr>    <tr>      <th>8</th>      <td>three</td>      <td>Three</td>      <td>Three</td>      <td>Three</td>    </tr>    <tr>      <th>9</th>      <td>at</td>      <td>ot</td>      <td>ot</td>      <td>ot</td>    </tr>    <tr>      <th>10</th>      <td>order</td>      <td>order</td>      <td>order</td>      <td>order</td>    </tr>    <tr>      <th>11</th>      <td>replacement</td>      <td>replacement</td>      <td>replacement</td>      <td>replacement</td>    </tr>    <tr>      <th>12</th>      <td>sampling</td>      <td>Sampling</td>      <td>Sampling</td>      <td>Sam(ting</td>    </tr>    <tr>      <th>13</th>      <td>and</td>      <td>and</td>      <td>and</td>      <td>and</td>    </tr>    <tr>      <th>14</th>      <td>Aaron</td>      <td>Aoron</td>      <td>Aowon</td>      <td>Moon</td>    </tr>    <tr>      <th>15</th>      <td>in</td>      <td>in</td>      <td>in</td>      <td>in</td>    </tr>    <tr>      <th>16</th>      <td>chosen</td>      <td>chosen</td>      <td>chosen</td>      <td>chosen</td>    </tr>    <tr>      <th>17</th>      <td>everyday</td>      <td>everyday</td>      <td>everyday</td>      <td>everyday</td>    </tr>    <tr>      <th>18</th>      <td>three</td>      <td>three</td>      <td>three</td>      <td>three</td>    </tr>    <tr>      <th>19</th>      <td>wednesday</td>      <td>Wednesday</td>      <td>Wednesday</td>      <td>Wednesday</td>    </tr>    <tr>      <th>20</th>      <td>matters</td>      <td>matters</td>      <td>matters</td>      <td>matters</td>    </tr>    <tr>      <th>21</th>      <td>random</td>      <td>vandom</td>      <td>vandom</td>      <td>random</td>    </tr>    <tr>      <th>22</th>      <td>either</td>      <td>ether</td>      <td>ether</td>      <td>ethereal</td>    </tr>    <tr>      <th>23</th>      <td>random</td>      <td>vandom</td>      <td>vandom</td>      <td>random</td>    </tr>    <tr>      <th>24</th>      <td>student</td>      <td>student</td>      <td>student</td>      <td>student</td>    </tr>    <tr>      <th>25</th>      <td>laura</td>      <td>Laura</td>      <td>Laura</td>      <td>Laurier</td>    </tr>    <tr>      <th>26</th>      <td>replacement</td>      <td>replacement</td>      <td>replacement</td>      <td>replacement</td>    </tr>    <tr>      <th>27</th>      <td>random</td>      <td>Reandom</td>      <td>Reandom</td>      <td>Panama</td>    </tr>    <tr>      <th>28</th>      <td>replacement</td>      <td>repbsement</td>      <td>repbsement</td>      <td>replacement</td>    </tr>    <tr>      <th>29</th>      <td>on</td>      <td>on</td>      <td>on</td>      <td>on</td>    </tr>    <tr>      <th>30</th>      <td>ordered</td>      <td>ordered</td>      <td>ordered</td>      <td>ordered</td>    </tr>    <tr>      <th>31</th>      <td>Ben</td>      <td>Ben</td>      <td>Ben</td>      <td>Ben</td>    </tr>    <tr>      <th>32</th>      <td>sampling</td>      <td>Sampting</td>      <td>Sampting</td>      <td>Sam2ting</td>    </tr>    <tr>      <th>33</th>      <td>samples</td>      <td>samples</td>      <td>samples</td>      <td>samples</td>    </tr>    <tr>      <th>34</th>      <td>sampling</td>      <td>Samping</td>      <td>Samping</td>      <td>Sam?ing</td>    </tr>    <tr>      <th>35</th>      <td>lead</td>      <td>lead</td>      <td>lead</td>      <td>lead</td>    </tr>    <tr>      <th>36</th>      <td>treasurer</td>      <td>treasurer</td>      <td>treasurer</td>      <td>treasure</td>    </tr>    <tr>      <th>37</th>      <td>to</td>      <td>to</td>      <td>to</td>      <td>to</td>    </tr>    <tr>      <th>38</th>      <td>chosen</td>      <td>chosen</td>      <td>chosen</td>      <td>chosen</td>    </tr>    <tr>      <th>39</th>      <td>lunch</td>      <td>lunch</td>      <td>lunch</td>      <td>lunch</td>    </tr>    <tr>      <th>40</th>      <td>chosen3</td>      <td>chosen</td>      <td>chosen</td>      <td>chosen</td>    </tr>    <tr>      <th>41</th>      <td>of</td>      <td>of</td>      <td>of</td>      <td>of</td>    </tr>    <tr>      <th>42</th>      <td>be</td>      <td>be</td>      <td>be</td>      <td>be</td>    </tr>    <tr>      <th>43</th>      <td>mary</td>      <td>Mary</td>      <td>Mary</td>      <td>Mary</td>    </tr>    <tr>      <th>44</th>      <td>Monday</td>      <td>Wonday</td>      <td>Wonday</td>      <td>Monday</td>    </tr>    <tr>      <th>45</th>      <td>president</td>      <td>president</td>      <td>president</td>      <td>president</td>    </tr>    <tr>      <th>46</th>      <td>team</td>      <td>team</td>      <td>team</td>      <td>team</td>    </tr>    <tr>      <th>47</th>      <td>irrelevant</td>      <td>irrelevant</td>      <td>irrelevant</td>      <td>irrelevant</td>    </tr>    <tr>      <th>48</th>      <td>tuesday</td>      <td>Tuesday</td>      <td>Tuesday</td>      <td>Tuesday</td>    </tr>    <tr>      <th>49</th>      <td>students</td>      <td>studerts</td>      <td>studerts</td>      <td>students</td>    </tr>    <tr>      <th>50</th>      <td>order</td>      <td>order</td>      <td>order</td>      <td>order</td>    </tr>    <tr>      <th>51</th>      <td>the</td>      <td>tne</td>      <td>tne</td>      <td>tone</td>    </tr>    <tr>      <th>52</th>      <td>example</td>      <td>Srample</td>      <td>Srample</td>      <td>Sample</td>    </tr>  </tbody></table>
+    
+    <h2><br>2. Points to Consider</h2><br>
     <div class="row">
-      <div class="col-lg-4">
-        <h1>Model Overview</h1>
-
-<p>- NN which is trained on IAM dataset word images</p>
-<p>- Consists of CNN layers (forward-feed neural networks) and RNN (back-and-forth flowing information)</p>
-<p>- Final Connectionist Temporal Classification (CTC) layer trains RNN</p>
-
-<p><img class="center-block" src="/resources/img1.png" style="width:50%;"></p>
-
-      </div>
-      <div class="col-lg-4">
-        <h2>Operations</h2>
-        <p>* 5 CNN layers
-<p>- Filter kernel of size 5x5 in the first two layers, and 3x3 in the last three layers</p>
-<p>- Image height is downsized by 2 in each layer</p>
-<p>- Output feature map (sequence) has size of 32 x 256</p>
-<p>- LTSM implementation of RNN is used</p>
-<p>- LTSM (cell, input gate, output gate, and forget gate), three gates regulate flow of information into and out of cell</p>
-<p>- IAM dataset = 79 different characters, and further one additional character needed for CTC operation= 80 entries for each of the 32 time-steps</p>
-<p>- RNN output sequence is mapped to a 32 x 80 matrix</p>
-<p>- CTC during the training of NN, the CTC is given the RNN output matrix +ground truth text and it computes loss value</p>
-<p>- Ground truth text - original image, image seen by direct observation, 32 character limit </p>
-<p><img class="center-block" src="/resources/img2.png" style="width:50%;"></p>
-     </div>
-      <div class="col-lg-4">
-        <h2>Data</h2>
-        <p>- Input: Gray value image of size 128x32, resized (without distortion, meaning white space is added instead of expanding original picture)</p>
-  <p>- CNN output: Fig. 4 shows output of CNN layers which is sequence of length 32, each entry contains 256 features</p>
-  <p>- RNN output: 80 entries on output matrix</p>
-  <p><img class="center-block" src="/resources/img3.png" style="width:50%;"></p>
+      <div class="col-lg-12">
+        <h3>Online & Offline Handwriting</h3>
+        <p>There is a difference between Online and Offline handwriting. Our model was built for real-life handwritten texts. Testing images were obtained from an online handwritten image, negatively affecting the recognition accuracy.  </p>
+        <div class="col-md-6" style="padding-left: 0px;  padding-right: 0px;">
+          <img src="{{url_for('static', filename='images/offline.png')}}" class="img-responsive">
+        </div>
+        <div class="col-md-6" style="padding-left: 0px;  padding-right: 0px;">
+          <img src="{{url_for('static', filename='images/online.png')}}" class="img-responsive">
+        </div>
       </div>
     </div>
-
+    <div class="row">
+      <div class="col-lg-12">
+        <h3>BestPath Decoder & Model WordBeam Decoder</h3>
+        <p>Unexpectedly, two of our decoders returned the same recognition results: BestPath and WordBeam. We believe this was because the trained model did not have enough word samples to create an optimized word beam model. Therefore, CTC word beam model we obtained online gave us a higher recognition accuracy. </p>
+      </div>
+    </div>
+    <h2><br>3. Going Forward</h2><br>
+    <div class="row">
+      <div class="col-lg-12">
+        <h3>Increasing Utility & Building Smarter Model</h3>
+        <p>We eventually want to provide value by allowing a search functionality for handwritten notes. A few challenges ahead are: segmenting notes to our desired granularity, increasing recognition accuracy, and speeding up the recognition process. </p>
+        <p>Also, we want to improve the model accuracy by asking the users to correct the words that are inaccurately recognized. It would be ideal to create a system in which users benefit from the convenience of the model, and they also contribute to the model by helping us build a larger dataset of handwritten texts. </p>
+      </div>
+    </div>
     <!-- Site footer -->
     <footer class="footer">
-      <p>&copy; 2018 Data Analytics Bootcamp </p>
+      <p>&copy; 2018 Data Analytics Bootcamp</p>
     </footer>
 
   </div> <!-- /container -->

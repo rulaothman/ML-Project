@@ -11,7 +11,7 @@
           <li><a href="/">Home</a></li>
           <li class="active"><a href="/about">About</a></li>
           <li><a href="/text_analysis">Text Analysis</a></li>
-          <li><a href="/info">Fun Facts</a></li>
+          <li><a href="/info">Application</a></li>
         </ul>
       </nav>
     </div>
@@ -20,25 +20,22 @@
     <div class="jumbotron">
       <h1>What Did We Use?</h1>
       <p class="lead">Below you will find a mongo database table used to navigate the various technologies utilized in our project.</p>
-      <p class="lead"></p>
-  
     </div>
 
     <!-- Two columns of differing widths -->
     <div class="row">
       <div class="col-sm-6">
-        <h2>Team Photo</h2>
-        <img src="images/groupic.jpg" style="width:50%;"/>
-        <p>Danny, Roy, Rula </p>
+        <h2 align = "center">Team Photo</h2>
+        <img class = "center-block" src="images/groupic.jpg" style="width:60%;"/>
+        <p align = "center"> Danny, Roy, Rula </p>
     
       </div>
       <div class="col-sm-6">
               <h2 align="center">Site Technologies</h2>
               <p align= "center">Type something in the input field to search the table for resources, names or versions:</p>
               <input class="form-control" id="myInput" type="text" placeholder="Search..">
+            <!--Create a table to call from everything variable defined in app.py--> 
             <table class="table table-hover">
-            <!--Create a table to call from everything variable defined in app.py-->
-
               <thead>
                 <tr>
                     <th>Resource</th>
@@ -55,8 +52,44 @@
                   </tr>
                   {% endfor %}
                 </table>
-     </div>
+      </div>
+    </div>
+     <div class="jumbotron">
+      <h1>About Our Model</h1>
+      <p class="lead"><img class="center-block" style="width:50%;" src="/resources/img4.jpeg"></p>
+    </div>
 
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-lg-4">
+        <h2>Model Overview</h2>
+          <p>- NN which is trained on IAM dataset word images</p>
+          <p>- Consists of CNN layers (forward-feed neural networks) and RNN (back-and-forth flowing information)</p>
+          <p>- Final Connectionist Temporal Classification (CTC) layer trains RNN</p>
+          <p><img class="center-block" src="/resources/img1.png" style="width:50%;"></p>
+      </div>
+      <div class="col-lg-4">
+        <h2>Operations</h2>
+          <p>* 5 CNN layers</p>
+          <p>- Filter kernel of size 5x5 in the first two layers, and 3x3 in the last three layers</p>
+          <p>- Image height is downsized by 2 in each layer</p>
+          <p>- Output feature map (sequence) has size of 32 x 256</p>
+          <p>- LTSM implementation of RNN is used</p>
+          <p>- LTSM (cell, input gate, output gate, and forget gate), three gates regulate flow of information into and out of cell</p>
+          <p>- IAM dataset = 79 different characters, and further one additional character needed for CTC operation= 80 entries for each of the 32 time-steps</p>
+          <p>- RNN output sequence is mapped to a 32 x 80 matrix</p>
+          <p>- CTC during the training of NN, the CTC is given the RNN output matrix +ground truth text and it computes loss value</p>
+          <p>- Ground truth text - original image, image seen by direct observation, 32 character limit </p>
+          <p><img class="center-block" src="/resources/img2.png" style="width:50%;"></p>
+     </div>
+      <div class="col-lg-4">
+        <h2>Data</h2>
+          <p>- Input: Gray value image of size 128x32, resized (without distortion, meaning white space is added instead of expanding original picture)</p>
+          <p>- CNN output: Fig. 4 shows output of CNN layers which is sequence of length 32, each entry contains 256 features</p>
+          <p>- RNN output: 80 entries on output matrix</p>
+          <p><img class="center-block" src="/resources/img3.png" style="width:50%;"></p>
+      </div>
+    </div>
     </div>
 
     <!-- Site footer -->
