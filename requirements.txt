@@ -7,7 +7,7 @@ autopep8==1.3.5
 backcall==0.1.0
 beautifulsoup4==4.6.3
 bg-helper==0.1.5
-bleach==2.1.3
+bleach==3.1.4
 boto3==1.9.28
 botocore==1.12.28
 bs4==0.0.1
